@@ -31,10 +31,6 @@ const Computers = ({ isMobile }) => {
 const Mobiles = () => {
   const mobile = useGLTF("./developer/scene.gltf");
 
-
-  
-
-
   return (
     <mesh >
       <hemisphereLight intensity={0.15} />
@@ -50,7 +46,7 @@ const Mobiles = () => {
       <primitive 
         object={mobile.scene}
         scale={ [1, 1, 1]}
-        position={ [0, -1, -0.2]}
+        position={ [0, -2, -0.2]}
         rotation={[-15, -0.2, -0.1]}
       />
     </mesh>
