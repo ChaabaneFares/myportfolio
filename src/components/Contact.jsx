@@ -76,6 +76,7 @@ const Contact = () => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
+            autoComplete="false"
               type="text"
               name="name"
               value={form.name}
@@ -87,6 +88,7 @@ const Contact = () => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your email</span>
             <input
+            autoComplete="true"
               type="email"
               name="email"
               value={form.email}
@@ -98,11 +100,12 @@ const Contact = () => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
+            autoComplete="true"
               rows={7}
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="What do you want to say?"
+              placeholder="How can I help?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
