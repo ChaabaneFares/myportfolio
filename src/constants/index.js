@@ -224,7 +224,7 @@ const projects = [
       "A plateforme designed for individuals or organizations looking to organize and manage events.It provides services like venue selection, catering coordination, entertainment bookings, and decor themes",
     tags: [
       {
-        name: "react",
+        name: "firestore",
         color: "blue-text-gradient",
       },
       {
@@ -249,16 +249,16 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "gsap",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "react js",
         color: "pink-text-gradient",
       },
     ],
     image: vshop,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://v-stores.vercel.app/",
   },
 ];
 
