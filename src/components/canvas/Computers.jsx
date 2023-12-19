@@ -29,7 +29,7 @@ const Computers = ({ isMobile }) => {
   );
 };
 const Mobiles = () => {
-  const mobile = useGLTF("./developer/model-draco.gltf");
+  const mobile = useGLTF("./developer/scene.gltf");
 
   return (
     <mesh >
