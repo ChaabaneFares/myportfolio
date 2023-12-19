@@ -56,13 +56,13 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Add a listener for changes to the screen size
+    
     const mediaQuery = window.matchMedia("(max-width: 500px)");
 
-    // Set the initial value of the `isMobile` state variable
+    
     setIsMobile(mediaQuery.matches);
 
-    // Define a callback function to handle changes to the media query
+    
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
@@ -106,7 +106,7 @@ const ComputersCanvas = () => {
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 4}
           />
-          <Computers  />
+          <Computers/>
         </Suspense>
         <Preload all />
       </Canvas>}
