@@ -200,7 +200,7 @@ const projects = [
   {
     name: "Branding agency",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A branding agency platform that offers a suite of services for businesses or people looking to establish or enhance their brand identity.This platform typically includes tools for logo design, marketing strategy development...",
     tags: [
       {
         name: "react",
@@ -221,7 +221,7 @@ const projects = [
   {
     name: "Events planner",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A plateforme designed for individuals or organizations looking to organize and manage events.It provides services like venue selection, catering coordination, entertainment bookings, and decor themes",
     tags: [
       {
         name: "react",
@@ -242,7 +242,7 @@ const projects = [
   {
     name: "E-commerce",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "An e-commerce website tailored for businesses or individuals aiming to sell products online. It offers features like product listing, inventory management, shopping cart integration, and secure payment processing.",
     tags: [
       {
         name: "nextjs",
