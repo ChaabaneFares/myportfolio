@@ -23,11 +23,12 @@ import threejs from "./tech/threejs.svg";
 
 
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import ep from "./4-2.jpg";
+import vshop from "./vshop.jpg";
+import ba from "./Screenshot1.png";
 
 export {
+  ep,
   logo,
   backend,
   creator,
@@ -49,7 +50,6 @@ export {
   tailwind,
   typescript,
   threejs,
-  carrent,
-  jobit,
-  tripguide,
+  vshop,
+  ba,
 };

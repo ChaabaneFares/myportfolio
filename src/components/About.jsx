@@ -5,10 +5,22 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
-  <section className="xs:w-[250px] w-full">
+const ServiceCard = ({ index, title, icon }) =>{
+  const handleMouseMove = (e) => {
+    const { clientX, clientY, currentTarget } = e;
+    const { left, top, width, height } = currentTarget.getBoundingClientRect();
+    const x = (clientX - left) / width - 0.5;
+    const y = (clientY - top) / height - 0.5;
+    currentTarget.style.transform = `rotateX(${x * 50}deg) rotateY(${y * 50}deg)`;
+  };
+
+return (
+  <section className="xs:w-[250px] w-full cursor-pointer"
+  onMouseMove={handleMouseMove}
+  onMouseLeave={(e) => (e.currentTarget.style.transform = "rotateX(0) rotateY(0)")}
+  >
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      variants={fadeIn("right", "spring", index * 0.5, 1)}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div
@@ -31,7 +43,7 @@ const ServiceCard = ({ index, title, icon }) => (
       </div>
     </motion.div>
   </section>
-);
+);}
 
 const About = () => {
   return (
@@ -42,7 +54,7 @@ const About = () => {
       </motion.div>
 
       <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
+        variants={fadeIn("", "", 0.1, 0.75)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         I'm a skilled software developer with experience in TypeScript and

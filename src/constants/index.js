@@ -15,10 +15,10 @@ import {
   git,
   figma,
   docker,
-  carrent,
-  jobit,
-  tripguide,
+  ep,
   threejs,
+  vshop,
+  ba,
 } from "../assets";
 
 export const navLinks = [
@@ -29,6 +29,10 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
+  },
+  {
+    id:"projects",
+    title:"Projects"
   },
   {
     id: "contact",
@@ -194,7 +198,7 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Branding agency",
     description:
       "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
@@ -203,19 +207,19 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "firebase",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "css",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: ba,
+    source_code_link: "https://5i.vercel.app/",
   },
   {
-    name: "Job IT",
+    name: "Events planner",
     description:
       "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
@@ -224,19 +228,19 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "next js",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "three js",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: ep,
+    source_code_link: "https://events-planner.vercel.app/",
   },
   {
-    name: "Trip Guide",
+    name: "E-commerce",
     description:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
@@ -253,7 +257,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: vshop,
     source_code_link: "https://github.com/",
   },
 ];

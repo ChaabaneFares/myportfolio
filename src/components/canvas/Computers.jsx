@@ -21,8 +21,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.7}
-        position={isMobile ? [0, -3, -2.2] : [0, -2.8, -1.5]}
+        scale={ 0.72}
+        position={ [0, -3, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -45,7 +45,7 @@ const Mobiles = () => {
       <pointLight intensity={1} />
       <primitive 
         object={mobile.scene}
-        scale={ [1, 1, 1]}
+        scale={ [1.5, 1.5, 1.5]}
         position={ [0, -2, -0.2]}
         rotation={[-15, -0.2, -0.1]}
       />
@@ -104,9 +104,9 @@ const ComputersCanvas = () => {
           <OrbitControls
             enableZoom={false}
             maxPolarAngle={Math.PI / 2}
-            minPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 4}
           />
-          <Computers isMobile={isMobile} />
+          <Computers  />
         </Suspense>
         <Preload all />
       </Canvas>}
