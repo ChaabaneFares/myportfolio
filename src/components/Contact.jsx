@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
@@ -83,11 +82,13 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's your name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              required
             />
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your email</span>
             <input
+            required
             autoComplete="true"
               type="email"
               name="email"
@@ -100,6 +101,7 @@ const Contact = () => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
+            required
             autoComplete="true"
               rows={7}
               name="message"
@@ -111,11 +113,12 @@ const Contact = () => {
           </label>
 
           <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
+    type="submit"
+    className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary transition duration-300 ease-in-out hover:bg-secondary hover:shadow-lg hover:color-black"
+>
+    {loading ? "Sending..." : "Send"}
+</button>
+
         </form>
       </motion.div>
 
