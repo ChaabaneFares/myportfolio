@@ -197,6 +197,7 @@ const testimonials = [
 ];
 
 const projects = [
+  
   {
     name: "Branding agency",
     description:

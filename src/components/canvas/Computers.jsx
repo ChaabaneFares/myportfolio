@@ -28,7 +28,7 @@ const Computers = ({ isMobile }) => {
     </mesh>
   );
 };
-const Mobiles = () => {
+const Mobiles = ({isMobile}) => {
   const mobile = useGLTF("./developer/scene.gltf");
 
   return (
@@ -82,7 +82,7 @@ const ComputersCanvas = () => {
         shadows
         dpr={[1, 2]}
         camera={{ position: [20, 3, 5], fov: 25 }}
-        gl={{ preserveDrawingBuffer: true }}> 
+      > 
         <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
@@ -90,7 +90,7 @@ const ComputersCanvas = () => {
           minPolarAngle={Math.PI / 2}
           autoRotate={true}
         />
-        <Mobiles/>
+        <Mobiles isMobile={true}/>
       </Suspense>
       <Preload all /> 
       </Canvas>: <Canvas
@@ -106,7 +106,7 @@ const ComputersCanvas = () => {
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 4}
           />
-          <Computers/>
+          <Computers isMobile={false}/>
         </Suspense>
         <Preload all />
       </Canvas>}
