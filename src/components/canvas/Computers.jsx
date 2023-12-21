@@ -21,8 +21,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={ 0.72}
-        position={ [0, -3, -1.5]}
+        scale={isMobile ? 0.35 : 0.72}
+        position={isMobile ? [-3.5, -2, -1.5] : [0, -3, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -52,6 +52,7 @@ const Mobiles = ({isMobile}) => {
     </mesh>
   );
 };
+
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -75,14 +76,18 @@ const ComputersCanvas = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
-
+  function isIOS() {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    return /iphone|ipad|ipod/.test(userAgent);
+  }
+  const renderIOS = isIOS();
   return (
     <>
-      {isMobile ? <Canvas frameloop="demand"
+      {isMobile ? ( renderIOS ? (<Canvas frameloop="demand"
         shadows
         dpr={[1, 2]}
         camera={{ position: [20, 3, 5], fov: 25 }}
-      > 
+        gl={{ preserveDrawingBuffer: true }}> 
         <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
@@ -93,7 +98,22 @@ const ComputersCanvas = () => {
         <Mobiles isMobile={true}/>
       </Suspense>
       <Preload all /> 
-      </Canvas>: <Canvas
+      </Canvas>):( <Canvas frameloop="demand"
+        shadows
+        dpr={[1, 2]}
+        camera={{ position: [20, 3, 5], fov: 25 }}
+        gl={{ preserveDrawingBuffer: true }}> 
+        <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2 }
+          minPolarAngle={Math.PI / 2}
+        
+        />
+     <Computers isMobile={true}/>
+      </Suspense>
+      <Preload all /> 
+      </Canvas> )):( <Canvas
         frameloop="demand"
         shadows
         dpr={[1, 2]}
@@ -109,7 +129,7 @@ const ComputersCanvas = () => {
           <Computers isMobile={false}/>
         </Suspense>
         <Preload all />
-      </Canvas>}
+      </Canvas>)}
     </>
   );
 };
