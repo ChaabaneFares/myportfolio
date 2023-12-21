@@ -14,7 +14,7 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-       <TypingEffect/>
+       <TypingEffect styles={styles}/>
       </div>
       
       <ComputersCanvas />
@@ -33,6 +33,7 @@ const Hero = () => {
               }}
               className="w-3 h-3 rounded-full bg-secondary mb-1"
             />
+            
           </div>
         </a>
       </div>

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { styles } from "../styles";
 
-const TypingEffect = () => {
+const TypingEffect = (props) => {
   const lines = [
     "Hi, I'm ",
     "Fares",
-    "I develop 3D visuals,",
+    "I develop 3D visuals, ",
     "user interfaces and web applications"
   ];
   const [currentLine, setCurrentLine] = useState(0);
@@ -28,11 +28,11 @@ const TypingEffect = () => {
 
   return (
     <div>
-      <h1 className={`${styles.heroHeadText} `}>
+      <h1 className={`${props.styles.heroHeadText} `}>
         {currentLine >= 1 && "Hi, I'm "}
         {currentLine >= 2 && <span className="text-[#915EFF]">Fares</span>}
       </h1>
-      <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+      <p className={`${props.styles.heroSubText} mt-2 text-white-100`}>
         {currentLine >= 3 && "I develop 3D visuals,"}
         {currentLine >= 4 && " user interfaces and web applications"}
         {text}
