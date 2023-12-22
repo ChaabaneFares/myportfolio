@@ -204,7 +204,7 @@ const projects = [
       "A branding agency platform that offers a suite of services for businesses or people looking to establish or enhance their brand identity.This platform typically includes tools for logo design, marketing strategy development...",
     tags: [
       {
-        name: "react",
+        name: "react js",
         color: "blue-text-gradient",
       },
       {
@@ -214,6 +214,10 @@ const projects = [
       {
         name: "css",
         color: "pink-text-gradient",
+      },
+      {
+        name: "vawzen",
+        color: "blue-text-gradient",
       },
     ],
     image: ba,
@@ -233,7 +237,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "three js",
+        name: "three fiber",
         color: "pink-text-gradient",
       },
     ],
@@ -257,6 +261,7 @@ const projects = [
         name: "react js",
         color: "pink-text-gradient",
       },
+      
     ],
     image: vshop,
     source_code_link: "https://v-stores.vercel.app/",
