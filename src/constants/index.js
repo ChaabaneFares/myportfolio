@@ -135,10 +135,12 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and maintaining mobile applications using React Native and related technologies.",
+    "Collaborating with cross-functional teams, including designers, product managers, and other developers, to create high-quality mobile applications.",
+    "Implementing responsive mobile design and ensuring cross-platform compatibility.",
+    "Participating in code reviews and providing constructive feedback to enhance the quality of mobile applications.",
+    "Utilizing native modules and integrating with native APIs for optimal performance.",
+    "Troubleshooting, debugging, and optimizing mobile applications for better user experience.",
     ],
   },
   {
@@ -161,10 +163,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed end-to-end web applications, handling both front-end (using React.js) and back-end (using Node.js, Express, or another server-side technology) components.",
+      "Collaborated with cross-functional teams, contributing to the design, development, and deployment of robust and scalable solutions.",
+      "Implemented RESTful APIs and database interactions to ensure seamless communication between the front-end and back-end components.",
+      "Participated in all phases of the software development lifecycle, from requirements gathering and design to testing, deployment, and maintenance.",
     ],
   },
 ];
