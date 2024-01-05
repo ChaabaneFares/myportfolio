@@ -101,23 +101,23 @@ const ComputersCanvas = () => {
       </Suspense>
       <Preload all /> 
       </Canvas>):( 
-    //   <Canvas frameloop="demand"
-    //     shadows
-    //     dpr={[1, 2]}
-    //     camera={{ position: [20, 3, 5], fov: 25 }}
-    //     gl={{ preserveDrawingBuffer: true }}> 
-    //     <Suspense fallback={<CanvasLoader />}>
-    //     <OrbitControls
-    //       enableZoom={false}
-    //       maxPolarAngle={Math.PI / 2 }
-    //       minPolarAngle={Math.PI / 2}
+      <Canvas frameloop="demand"
+        shadows
+        dpr={[1, 2]}
+        camera={{ position: [20, 3, 5], fov: 25 }}
+        gl={{ preserveDrawingBuffer: true }}> 
+        <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2 }
+          minPolarAngle={Math.PI / 2}
         
-    //     />
-    //  <Computers isMobile={true}/>
-    //   </Suspense>
-    //   <Preload all /> 
-    //   </Canvas>
-       <></>
+        />
+     <Computers isMobile={true}/>
+      </Suspense>
+      <Preload all /> 
+      </Canvas>
+       
       )):( <Canvas
         frameloop="demand"
         shadows
