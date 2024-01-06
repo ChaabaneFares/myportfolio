@@ -7,7 +7,7 @@ dns.setDefaultResultOrder('verbatim')
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'dist', // Specify the output directory (default is 'dist')
+    outDir: 'dist', 
     sourcemap: true, // Generate source maps
     minify: 'terser', // Specify minifier (e.g., 'terser', 'esbuild')
     terserOptions: {
