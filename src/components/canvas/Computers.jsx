@@ -31,7 +31,9 @@ const Computers = ({ isMobile }) => {
   );
 };
 const Mobiles = ({isMobile}) => {
-  const mobile = useGLTF("./developer/scene.gltf");
+  const mobile = useGLTF("./developer/scene.gltf", null, (err) => {
+    if (err) console.error("Error loading computer model:", err);
+  });
 
   return (
     <mesh >
@@ -71,7 +73,7 @@ const ComputersCanvas = () => {
     };
 
     
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    mediaQuery.addEventListener("change", handleMediaQueryChange, { passive: true });
 
     // Remove the listener when the component is unmounted
     return () => {
@@ -103,23 +105,23 @@ const ComputersCanvas = () => {
       </Suspense>
       <Preload all /> 
       </Canvas>):( 
-    //   <Canvas frameloop="demand"
-    //     shadows
-    //     dpr={[1, 2]}
-    //     camera={{ position: [20, 3, 5], fov: 25 }}
-    //     gl={{ preserveDrawingBuffer: true }}> 
-    //     <Suspense fallback={<CanvasLoader />}>
-    //     <OrbitControls
-    //       enableZoom={false}
-    //       maxPolarAngle={Math.PI / 2 }
-    //       minPolarAngle={Math.PI / 2}
+      <Canvas frameloop="demand"
+        shadows
+        dpr={[1, 2]}
+        camera={{ position: [20, 3, 5], fov: 25 }}
+        gl={{ preserveDrawingBuffer: true }}> 
+        <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2 }
+          minPolarAngle={Math.PI / 2}
         
-    //     />
-    //  <Computers isMobile={true}/>
-    //   </Suspense>
-    //   <Preload all /> 
-    //   </Canvas>
-    <></>
+        />
+     <Mobiles isMobile={true}/>
+      </Suspense>
+      <Preload all /> 
+      </Canvas>
+    // <></>
        
       )):( <Canvas
         frameloop="demand"

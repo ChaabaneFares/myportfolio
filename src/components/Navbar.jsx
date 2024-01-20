@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import {  menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -21,7 +21,7 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     const navbarHighlighter = () => {
       const sections = document.querySelectorAll("section[id]");
@@ -38,7 +38,7 @@ const Navbar = () => {
       });
     };
 
-    window.addEventListener("scroll", navbarHighlighter);
+    window.addEventListener("scroll", navbarHighlighter, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
