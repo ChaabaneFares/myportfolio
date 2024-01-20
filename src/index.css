@@ -12,7 +12,10 @@
   scroll-behavior: smooth;
   color-scheme: dark;
 }
-
+*::selection {
+ color: #050816; 
+ background-color: #fff;
+}
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
