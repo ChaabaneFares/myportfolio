@@ -19,6 +19,7 @@ import {
   threejs,
   vshop,
   ba,
+  mysql,
 } from "../assets";
 
 export const navLinks = [
@@ -80,10 +81,7 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
+
   {
     name: "Tailwind CSS",
     icon: tailwind,
@@ -109,8 +107,8 @@ const technologies = [
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "mysql",
+    icon: mysql,
   },
 ];
 
