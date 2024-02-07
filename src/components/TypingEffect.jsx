@@ -14,12 +14,12 @@ const TypingEffect = () => {
       if (text.length < lines[currentLine].length) {
         setTimeout(() => {
           setText(lines[currentLine].slice(0, text.length + 1));
-        }, 50); // Typing speed
+        }, 50); 
       } else {
         setTimeout(() => {
           setCurrentLine(currentLine + 1);
           setText('');
-        }, 250); // Delay before typing next line
+        }, 250);
       }
     }
   }, [text, lines, currentLine]);

@@ -20,6 +20,7 @@ import {
   vshop,
   ba,
   mysql,
+  cci,
 } from "../assets";
 
 export const navLinks = [
@@ -115,10 +116,10 @@ const technologies = [
 const experiences = [
   {
     title: "React.js Developer",
-    // company_name: "Starbucks",
+    company_name: "Vawzen",
     // icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    // date: "March 2020 - April 2021",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -128,10 +129,10 @@ const experiences = [
   },
   {
     title: "React Native Developer",
-    // company_name: "Tesla",
+    company_name: "Vawzen",
     // icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    // date: "Jan 2021 - Feb 2022",
     points: [
       "Developing and maintaining mobile applications using React Native and related technologies.",
     "Collaborating with cross-functional teams, including designers, product managers, and other developers, to create high-quality mobile applications.",
@@ -143,10 +144,10 @@ const experiences = [
   },
   {
     title: "Web Developer",
-    // company_name: "Shopify",
+    company_name: "Vawzen",
     // icon: shopify,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    // date: "Jan 2022 - Jan 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -156,10 +157,10 @@ const experiences = [
   },
   {
     title: "Full stack Developer",
-    // company_name: "Meta",
+    company_name: "Vawzen",
     // icon: meta,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "March 2023 - Present",
     points: [
       "Developed end-to-end web applications, handling both front-end (using React.js) and back-end (using Node.js, Express, or another server-side technology) components.",
       "Collaborated with cross-functional teams, contributing to the design, development, and deployment of robust and scalable solutions.",
@@ -266,6 +267,27 @@ const projects = [
     image: vshop,
     source_code_link: "https://v-stores.vercel.app/",
   },
+  {
+    name: "Cleaning Services Platform",
+    description: "Welcome to CCI, your all-in-one cleaning services platform dedicated to transforming your space into a pristine haven. Our platform offers a comprehensive suite of services, including upholstery cleaning, floor polishing, and more, tailored to meet your exact needs...",
+    tags: [
+    {
+    name: "astrojs",
+    color: "blue-text-gradient",
+    },
+    {
+    name: "react",
+    color: "green-text-gradient",
+    },
+    {
+    name: "gsap",
+    color: "pink-text-gradient",
+    },
+   
+    ],
+    image: cci,
+    source_code_link: "https://shinbrightcleaners.com/",
+    }
 ];
 
 export { services, technologies, experiences, testimonials, projects };

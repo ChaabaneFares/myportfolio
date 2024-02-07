@@ -18,7 +18,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'], // Split vendor code into separate chunk
+          vendor: ['react', 'react-dom'], 
         },
       },
     },
