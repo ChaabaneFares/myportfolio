@@ -122,7 +122,7 @@ const ComputersCanvas = () => {
       </Suspense>
       <Preload all /> 
       </Canvas>):( 
-        <div className='w-full h-auto absolute inset-0 z-[10]'>
+        <div className='w-full h-auto absolute inset-0 z-[0]'>
        <StarsCanvas/>
        </div>
   

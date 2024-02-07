@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
     return (
-      <footer className="bg-primary py-5">
+      <footer className="bg-transparent py-5">
         <div className="flex justify-center items-center flex-col">
      
           <ul className="list-none flex flex-col sm:flex-row gap-5 sm:gap-10">
