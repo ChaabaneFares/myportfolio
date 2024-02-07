@@ -50,7 +50,7 @@ const Mobiles = ({isMobile}) => {
       <pointLight intensity={1} />
       <primitive 
         object={mobile.scene}
-        scale={ [1.5, 1.5, 1.5]}
+        scale={ [1, 1, 1]}
         position={ [0, -2, -0.2]}
         rotation={[-15, -0.2, -0.1]}
       />
