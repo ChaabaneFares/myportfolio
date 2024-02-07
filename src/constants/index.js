@@ -243,7 +243,7 @@ const projects = [
       },
     ],
     image: ep,
-    source_code_link: "https://events-planner.vercel.app/",
+    source_code_link: "https://themoon-three.vercel.app/",
   },
   {
     name: "E-commerce",
@@ -268,6 +268,27 @@ const projects = [
     source_code_link: "https://v-stores.vercel.app/",
   },
   {
+    name: "Cleaning Services Platform",
+    description: "Welcome to CCI, your all-in-one cleaning services platform dedicated to transforming your space into a pristine haven. Our platform offers a comprehensive suite of services, including upholstery cleaning, floor polishing, and more, tailored to meet your exact needs...",
+    tags: [
+    {
+    name: "astrojs",
+    color: "blue-text-gradient",
+    },
+    {
+    name: "react",
+    color: "green-text-gradient",
+    },
+    {
+    name: "gsap",
+    color: "pink-text-gradient",
+    },
+   
+    ],
+    image: cci,
+    source_code_link: "https://cci-services.vercel.app/",
+    },
+    {
     name: "Cleaning Services Platform",
     description: "Welcome to CCI, your all-in-one cleaning services platform dedicated to transforming your space into a pristine haven. Our platform offers a comprehensive suite of services, including upholstery cleaning, floor polishing, and more, tailored to meet your exact needs...",
     tags: [
