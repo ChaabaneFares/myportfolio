@@ -21,6 +21,22 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
+      keyframes: {
+        twinkling: {
+          "0%": { opacity: 0 },
+          "50%": { opacity: 1 },
+          "100%": { opacity: 0 },
+        },
+        'animate-twinkling': {
+          '0%': { transform: 'translate(0, 0)' },
+          '50%': { transform: 'translate(10px, -10px)' }, /* Adjust movement as needed */
+          '100%': { transform: 'translate(0, 0)' },
+        },
+      },
+      animation: {
+        twinkling: 'twinkling 3s infinite',
+        'animate-twinkling': 'animate-twinkling 5s infinite', // Adjust duration as needed
+      },
     },
   },
   plugins: [],

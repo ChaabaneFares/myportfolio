@@ -1,9 +1,27 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-
 import CanvasLoader from "../Loader";
 
+const TwinklingStars = () => {
+  return (
+    <div className="relative w-full h-full">
+      {/* Five twinkling stars */}
+      {[...Array(15)].map((_, index) => (
+        <div
+          key={index}
+          className="absolute w-1 h-1 bg-white rounded-full animate-twinkling"
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 3}s`,
+            animationDuration: `${Math.random() * 5 + 5}s`, 
+          }}
+        />
+      ))}
+    </div>
+  );
+}
 const Computers = ({ isMobile }) => {
  const computer =useGLTF("./desktop_pc/scene.gltf", null, (err) => {
     if (err) console.error("Error loading computer model:", err);
@@ -103,18 +121,7 @@ const ComputersCanvas = () => {
       </Suspense>
       <Preload all /> 
       </Canvas>):( 
-    //   <Canvas frameloop="demand"
-    //     shadows
-    //     dpr={[1, 2]}
-    //     camera={{ position: [20, 3, 5], fov: 25 }}
-    //     gl={{ preserveDrawingBuffer: true }}> 
-    //     <Suspense fallback={<CanvasLoader />}>
-       
-    //  <Mobiles isMobile={true}/>
-    //   </Suspense>
-    //   <Preload all /> 
-    //   </Canvas>
-    <></>
+   <TwinklingStars/>
        
       )):( <Canvas
         frameloop="demand"
