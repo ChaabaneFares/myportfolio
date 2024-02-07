@@ -2,6 +2,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
+import StarsCanvas from "./Stars";
 
 const TwinklingStars = () => {
   return (
@@ -121,7 +122,10 @@ const ComputersCanvas = () => {
       </Suspense>
       <Preload all /> 
       </Canvas>):( 
-   <TwinklingStars/>
+        <div className='w-full h-auto absolute inset-0 z-[10]'>
+       <StarsCanvas/>
+       </div>
+  
        
       )):( <Canvas
         frameloop="demand"
