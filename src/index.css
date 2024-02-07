@@ -13,7 +13,7 @@
   color-scheme: dark;
 }
 *::selection {
- color: #050816; 
+ color: #050816ee; 
  background-color: #fff;
 }
 .hash-span {
