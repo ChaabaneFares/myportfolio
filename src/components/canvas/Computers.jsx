@@ -89,7 +89,7 @@ const ComputersCanvas = () => {
   return (
     <>
       {isMobile ? ( renderIOS ? (
-         <div className='w-full h-auto absolute inset-0 z-[0]'>
+         <div className='w-full h-auto absolute inset-[0] z-[0] overflow-hidden'>
       <Canvas frameloop="demand"
         shadows
         dpr={[1, 2]}
