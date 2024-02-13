@@ -89,32 +89,21 @@ const ComputersCanvas = () => {
   return (
     <>
       {isMobile ? ( renderIOS ? (
-       <div className='w-full h-full relative'>
-       <Canvas
-         className='w-full h-auto absolute inset-0 z-[0]'
-         frameloop="demand"
-         shadows
-         dpr={[1, 2]}
-         camera={{ position: [20, 3, 5], fov: 25 }}
-         gl={{ preserveDrawingBuffer: true }}
-       > 
-         <Suspense fallback={<CanvasLoader />}>
-           <OrbitControls
-             enableZoom={false}
-             autoRotate={true}
-             enableRotate={false}
-           />
-           <Mobiles isMobile={true}/>
-         </Suspense>
-         <Preload all /> 
-       </Canvas>
-       <div
-         className='w-full h-full absolute inset-0 z-[1] pointer-events-none bg-transparent opacity-50'
-       >
-         {/* Content inside the red overlay div */}
-       </div>
-     </div>
-     ):( 
+      <Canvas frameloop="demand"
+        shadows
+        dpr={[1, 2]}
+        camera={{ position: [20, 3, 5], fov: 25 }}
+        gl={{ preserveDrawingBuffer: true }}> 
+        <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          enableZoom={false}
+          autoRotate={true}
+          enableRotate={false}
+        />
+        <Mobiles isMobile={true}/>
+      </Suspense>
+      <Preload all /> 
+      </Canvas>):( 
         <div className='w-full h-auto absolute inset-0 z-[0]'>
        <StarsCanvas/>
        </div>

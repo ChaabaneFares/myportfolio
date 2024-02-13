@@ -17,7 +17,12 @@ const Hero = () => {
        <TypingEffect />
       </div>
       
-      <ComputersCanvas />
+      <div className="absolute inset-0 z-0">
+        <ComputersCanvas />
+      </div>
+
+      {/* Transparent overlay */}
+      <div className="absolute inset-0 z-[1] bg-transparent opacity-0"></div>
 
       <div className="absolute xs:bottom-10 bottom-2 w-full flex justify-center items-center">
         <a href="#about">
