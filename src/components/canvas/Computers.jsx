@@ -89,6 +89,7 @@ const ComputersCanvas = () => {
   return (
     <>
       {isMobile ? ( renderIOS ? (
+        <div className='w-full h-auto absolute inset-0 z-[0]'>
       <Canvas frameloop="demand"
         shadows
         dpr={[1, 2]}
@@ -103,7 +104,9 @@ const ComputersCanvas = () => {
         <Mobiles isMobile={true}/>
       </Suspense>
       <Preload all /> 
-      </Canvas>):( 
+      </Canvas>
+      <div className="absolute inset-0 z-[1] bg-transparent"></div>
+      </div>):( 
         <div className='w-full h-auto absolute inset-0 z-[0]'>
        <StarsCanvas/>
        </div>
