@@ -107,9 +107,9 @@ const ComputersCanvas = () => {
       </Canvas>
       <div className="absolute inset-0 z-[1] bg-transparent"></div>
       </div>):( 
-          <div className="absolute inset-0 z-0">
+       <div className='w-full h-auto absolute inset-0 z-[0]'> 
        <StarsCanvas/>
-       </div>
+       </div> 
        
       )):( <Canvas
         frameloop="demand"
