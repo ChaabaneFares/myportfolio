@@ -17,9 +17,9 @@ const Hero = () => {
        <TypingEffect />
       </div>
       
-      {/* <div className="absolute inset-0 z-0"> */}
+      <div className="absolute inset-0 z-0">
         <ComputersCanvas />
-      {/* </div> */}
+      </div>
 
       {/* Transparent overlay */}
       {/* <div className="absolute inset-0 z-[1] bg-transparent"> */}
