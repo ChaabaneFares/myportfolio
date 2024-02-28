@@ -8,7 +8,7 @@ const Footer = () => {
      
           <ul className="list-none flex flex-col sm:flex-row gap-5 sm:gap-10">
             {navLinks.map((nav) => (
-              <li key={nav.id} className="text-white text-[18px] font-medium cursor-pointer">
+              <li key={nav.id} className="text-white text-[18px] font-medium cursor-pointer text-center">
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
