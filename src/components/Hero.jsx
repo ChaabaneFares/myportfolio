@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import TypingEffect from "./TypingEffect.jsx";
 import { styles } from "../styles";
-// import ComputersCanvas from "./canvas/ComputersCanvas.jsx";
+import ComputersCanvas from "./canvas/ComputersCanvas.jsx";
 import { SectionWrapper } from "../hoc";
 
 const Loader = () => (

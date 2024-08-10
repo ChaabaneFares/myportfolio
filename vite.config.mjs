@@ -7,7 +7,5 @@ export default defineConfig({
   build: {
     outDir: '../dist',  // Ensure this is pointing to where you want the build files
   },
-  server: {
-    port: 5174,  // Set the port to 5174
-  },
+
 });
