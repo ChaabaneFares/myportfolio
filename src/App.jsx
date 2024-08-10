@@ -21,8 +21,10 @@ const App = () => {
     <Router>
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <Suspense fallback={renderLoader()}>
           <Navbar />
           <Hero />
+          </Suspense>
         </div>
 
         <Suspense fallback={renderLoader()}>
