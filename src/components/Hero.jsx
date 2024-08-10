@@ -1,11 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import TypingEffect from "./TypingEffect.jsx";
 import { styles } from "../styles";
-import ComputersCanvas from "./canvas/ComputersCanvas.jsx";
+// import ComputersCanvas from "./canvas/ComputersCanvas.jsx";
 import { SectionWrapper } from "../hoc";
 
+const Loader = () => (
+  <div className="flex justify-center items-center h-full space-x-4">
+    <motion.div
+      className="w-6 h-6 bg-[#915EFF] rounded-full"
+      animate={{ y: [0, -20, 0] }}
+      transition={{ duration: 0.6, repeat: Infinity, delay: 0 }}
+    />
+    <motion.div
+      className="w-6 h-6 bg-[#915EFF] rounded-full"
+      animate={{ y: [0, -20, 0] }}
+      transition={{ duration: 0.6, repeat: Infinity, delay: 0.2 }}
+    />
+    <motion.div
+      className="w-6 h-6 bg-[#915EFF] rounded-full"
+      animate={{ y: [0, -20, 0] }}
+      transition={{ duration: 0.6, repeat: Infinity, delay: 0.4 }}
+    />
+  </div>
+);
+
 const Hero = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // simulate a 3-second loading time
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="relative w-full h-screen mx-auto overflow-hidden">
       <div className="absolute z-10 top-[70px] max-w-7xl mx-auto px-6 sm:px-16 flex flex-row items-start gap-5">
@@ -18,7 +48,7 @@ const Hero = () => {
       </div>
 
       <div className="absolute inset-0 z-20">
-        <ComputersCanvas />
+        {isLoading ? <Loader /> : <ComputersCanvas />}
       </div>
 
       <div className="absolute bottom-2 xs:bottom-0 w-full flex justify-center items-center z-10">
