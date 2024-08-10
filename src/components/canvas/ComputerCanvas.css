@@ -1,0 +1,21 @@
+/* ComputersCanvas.css */
+.computersCanvasWrapper {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.canvasCover {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: transparent;
+    pointer-events: none; /* Ensures clicks pass through */
+}
+@media (min-width: 800px) { /* Adjust breakpoint as needed */
+    .canvasCover {
+      pointer-events: auto;
+    }
+  }

@@ -1,0 +1,5 @@
+node_modules/
+build/
+dist/ 
+cjs/scheduler.production.min.js
+cjs/scheduler.development.js

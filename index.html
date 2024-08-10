@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      /* Inline only the critical CSS needed for the initial render */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+        color-scheme: dark;
+      }
+      *::selection {
+        color: #050816ee; 
+        background-color: #fff;
+      }
+      .hash-span {
+        margin-top: -100px;
+        padding-bottom: 100px;
+        display: block;
+      }
+      .font-black { font-weight: 900; }
+    .text-white { color: white; }
+    .lg\:text-\[80px\] { font-size: 80px; }
+    .sm\:text-\[60px\] { font-size: 60px; }
+    .xs\:text-\[50px\] { font-size: 50px; }
+    .text-\[40px\] { font-size: 40px; }
+    .lg\:leading-\[98px\] { line-height: 98px; }
+    .mt-2 { margin-top: 0.5rem; }
+    .text-\[\#915EFF\] { color: #915EFF; }
+    .text-\[\#dfd9ff\] { color: #dfd9ff; }
+    .font-medium { font-weight: 500; }
+    .lg\:text-\[30px\] { font-size: 30px; }
+    .sm\:text-\[26px\] { font-size: 26px; }
+    .xs\:text-\[20px\] { font-size: 20px; }
+    .text-\[16px\] { font-size: 16px; }
+    .lg\:leading-\[40px\] { line-height: 40px; }
+    .text-white-100 { color: #fff; }
+
+    
+    </style>
+
+    <link rel="canonical" href="https://fareschaabane.com/"/>
+		    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo1.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="webgl" content="true" />
+    <title>Fares Chaabane | 3D Portfolio</title>
+    
+    <!-- Preload Google Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"></noscript>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Fares Chaabane's 3D Portfolio - Showcasing cutting-edge 3D designs, web and mobile apps, highly interactive ux and tech expertise." />
+    <meta name="keywords" content="3D portfolio, 3D design, Fares Chaabane portfolio, webgl, tech expertise, mobile and web applications, highly interactive experiences" />
+    <meta name="author" content="Fares Chaabane" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Fares Chaabane | 3D Portfolio" />
+    <meta property="og:description" content="Fares Chaabane's 3D Portfolio - Showcasing cutting-edge 3D designs, web and mobile apps, highly interactive ux and tech expertise." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://fareschaabane.com" />
+    <meta property="og:image" content="http://fareschaabane.com/logo1.png" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fares Chaabane | 3D Portfolio" />
+    <meta name="twitter:description" content="Fares Chaabane's 3D Portfolio - Showcasing cutting-edge 3D designs, web and mobile apps, highly interactive ux and tech expertise." />
+    <meta name="twitter:image" content="http://fareschaabane.com/logo1.png" />
+    <meta name="twitter:site" content="@yourtwitterhandle" />
+    <meta name="twitter:creator" content="@yourtwitterhandle" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Fares Chaabane | 3D Portfolio",
+      "description": "Fares Chaabane's 3D Portfolio - Showcasing cutting-edge 3D designs, web and mobile apps, highly interactive ux and tech expertise.",
+      "url": "http://fareschaabane.com",
+      "image": "http://fareschaabane.com/logo1.png",
+      "author": {
+        "@type": "Person",
+        "name": "Fares Chaabane"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "VAWZEN",
+        "url":'https://vawzen.org/'
+        "logo": {
+          "@type": "ImageObject",
+          "url": "http://fareschaabane.com/logo1.png"
+        }
+      }
+    }
+    </script>
+    
+
+    
+    <!-- Preload non-critical CSS -->
+    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
+  </head>
+  <body>
+    <div id="root"></div>
+    <link rel="modulepreload" href="./src/components/canvas/ComputersCanvas.jsx">
+    <link rel="modulepreload" href="./src/components/">
+    <script type="module" src="./src/main.jsx"></script>
+  </body>
+</html>
