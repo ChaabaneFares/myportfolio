@@ -4,9 +4,8 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 import StarsCanvas from "./Stars";
 
-
 const Computers = ({ isMobile }) => {
- const computer =useGLTF("./desktop_pc/scene.gltf", null, (err) => {
+ const computer = useGLTF("./desktop_pc/scene.gltf", null, (err) => {
     if (err) console.error("Error loading computer model:", err);
   });
 
@@ -31,6 +30,7 @@ const Computers = ({ isMobile }) => {
     </mesh>
   );
 };
+
 const Mobiles = ({isMobile}) => {
   const mobile = useGLTF("./developer/scene.gltf", null, (err) => {
     if (err) console.error("Error loading computer model:", err);
@@ -62,72 +62,57 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    
     const mediaQuery = window.matchMedia("(max-width: 500px)");
-
-    
     setIsMobile(mediaQuery.matches);
-
-    
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
 
-    
     mediaQuery.addEventListener("change", handleMediaQueryChange, { passive: true });
 
-    // Remove the listener when the component is unmounted
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
-  function isIOS() {
-    const userAgent = window.navigator.userAgent.toLowerCase();
-    return /iphone|ipad|ipod/.test(userAgent);
-  }
-  const renderIOS = isIOS();
+
   return (
     <>
-      {isMobile ? ( renderIOS ? (
+      {isMobile ? (
         <div className='w-full h-auto absolute inset-0 z-[0]'>
-      <Canvas frameloop="demand"
-        shadows
-        dpr={[1, 2]}
-        camera={{ position: [20, 3, 5], fov: 25 }}
-        gl={{ preserveDrawingBuffer: true }}> 
-        <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          autoRotate={true}
-          enableRotate={false}
-        />
-        <Mobiles isMobile={true}/>
-      </Suspense>
-      <Preload all /> 
-      </Canvas>
-      <div className="absolute inset-0 z-[1] bg-transparent"></div>
-      </div>):( 
-        
-       <StarsCanvas/>
-        
-       
-      )):( <Canvas
-        frameloop="demand"
-        shadows
-        dpr={[1, 2]}
-        camera={{ position: [20, 3, 5], fov: 25 }}
-        gl={{ preserveDrawingBuffer: true }}> 
-      
-        <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls
-            enableZoom={false}
-            maxPolarAngle={Math.PI / 2}
-            minPolarAngle={Math.PI / 4}
-          />
-          <Computers isMobile={false}/>
-        </Suspense>
-        <Preload all />
-      </Canvas>)}
+          <Canvas frameloop="demand"
+            shadows
+            dpr={[1, 2]}
+            camera={{ position: [20, 3, 5], fov: 25 }}
+            gl={{ preserveDrawingBuffer: true }}> 
+            <Suspense fallback={<CanvasLoader />}>
+              <OrbitControls
+                enableZoom={false}
+                autoRotate={true}
+                enableRotate={false}
+              />
+              <Mobiles isMobile={true}/>
+            </Suspense>
+            <Preload all /> 
+          </Canvas>
+          <div className="absolute inset-0 z-[1] bg-transparent"></div>
+        </div>
+      ) : (
+        <Canvas
+          frameloop="demand"
+          shadows
+          dpr={[1, 2]}
+          camera={{ position: [20, 3, 5], fov: 25 }}> 
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls
+              enableZoom={false}
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 4}
+            />
+            <Computers isMobile={false}/>
+          </Suspense>
+          <Preload all />
+        </Canvas>
+      )}
     </>
   );
 };
