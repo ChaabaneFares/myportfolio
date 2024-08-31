@@ -222,7 +222,7 @@ const projects = [
       },
     ],
     image: ba,
-    source_code_link: "https://5i.vercel.app/",
+    source_code_link: "https://vibrand.vercel.app/",
   },
   {
     name: "Events planner",
@@ -265,7 +265,7 @@ const projects = [
       
     ],
     image: vshop,
-    source_code_link: "https://v-stores.vercel.app/",
+    source_code_link: "https://www.vzen.store/",
   },
   {
     name: "Cleaning Services Platform",
@@ -286,7 +286,7 @@ const projects = [
    
     ],
     image: cci,
-    source_code_link: "https://cci-services.vercel.app/",
+    source_code_link: "https://cciservices.online/",
     },
     
 ];
